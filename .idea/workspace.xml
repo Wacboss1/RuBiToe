@@ -2,19 +2,19 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="UE4" targetName="RuBiToe-Win64-Shipping" />
+      <config projectName="UE4" targetName="RuBiToeEditor-Win64-Shipping" />
       <config projectName="UE4" targetName="RuBiToe" />
       <config projectName="UE4" targetName="UE4Game-Win64-Shipping" />
+      <config projectName="UE4" targetName="UE4Editor" />
       <config projectName="UE4" targetName="FakeTarget" />
-      <config projectName="UE4" targetName="RuBiToeEditor" />
-      <config projectName="UE4" targetName="UE4Editor-Win64-DebugGame" />
       <config projectName="UE4" targetName="UE4Game-Win64-DebugGame" />
       <config projectName="UE4" targetName="RuBiToe-Win64-DebugGame" />
-      <config projectName="UE4" targetName="RuBiToeEditor-Win64-Shipping" />
+      <config projectName="UE4" targetName="RuBiToeEditor" />
+      <config projectName="UE4" targetName="UE4Editor-Win64-DebugGame" />
       <config projectName="UE4" targetName="UE4Editor-Win64-Shipping" />
       <config projectName="UE4" targetName="RuBiToeEditor-Win64-DebugGame" />
       <config projectName="UE4" targetName="UE4Game" />
-      <config projectName="UE4" targetName="UE4Editor" />
+      <config projectName="UE4" targetName="RuBiToe-Win64-Shipping" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -112,11 +112,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.FakeTarget" />
       <item itemvalue="CMake Application.RuBiToe-Win64-DebugGame" />
@@ -146,6 +141,8 @@
       <workItem from="1606807523612" duration="221000" />
       <workItem from="1606807833239" duration="818000" />
       <workItem from="1606808672437" duration="27000" />
+      <workItem from="1607652631252" duration="17000" />
+      <workItem from="1607843305193" duration="760000" />
     </task>
     <servers />
   </component>

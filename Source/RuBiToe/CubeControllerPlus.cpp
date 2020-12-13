@@ -19,8 +19,7 @@ void UCubeControllerPlus::BeginPlay()
 {
 	Super::BeginPlay();
 	FOutputDeviceNull ar;
-	this->GetOwner()->CallFunctionByNameWithArguments(TEXT("TestMethod"), ar, NULL, true);
-	this->GetOwner()->CallFunctionByNameWithArguments(TEXT("TestMethod"), ar, NULL, true);
+	this->GetOwner()->CallFunctionByNameWithArguments(TEXT("rotateRight false"), ar, NULL, true);
 }
 
 
