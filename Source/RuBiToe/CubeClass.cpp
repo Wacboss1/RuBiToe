@@ -3,6 +3,8 @@
 
 #include "CubeClass.h"
 
+void SetupArray();
+
 enum sideName {
 	front,
 	right,
@@ -17,7 +19,7 @@ typedef struct CubeFace {
 	int values[3][3];
 } side;
 
-side* sides[6];
+side sides[6];
 
 // Sets default values for this component's properties
 UCubeClass::UCubeClass()
@@ -36,18 +38,19 @@ void UCubeClass::BeginPlay()
 	Super::BeginPlay();
 	//int i = front; i != bottom; i++
 	SetupArray();
+	UE_LOG(LogTemp, Warning, TEXT("Is this working"));
 }
 
 void SetupArray()
 {
-	for (int i = 0; i < 6; i++)
+	for (int i = 1; i <= 6; i++)
 	{
-		sides[i]->name = static_cast<sideName>(i);
+		sides[i].name = static_cast<sideName>(i);
 		for (int j = 0; j < 3; j++)
 		{
 			for (int k = 0; k < 3; k++)
 			{
-				sides[i]->values[j][k] = 0;
+				sides[i-1].values[j][k] = 0;
 			}
 		}
 	}
