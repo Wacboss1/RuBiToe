@@ -3,8 +3,10 @@
 
 #include "CubeClass.h"
 
-void SetupArray();
+//Prototypes
 
+
+//Data
 enum sideName {
 	front,
 	right,
@@ -19,7 +21,9 @@ typedef struct CubeFace {
 	int values[3][3];
 } side;
 
+//Class variables
 side sides[6];
+static const char* EnumStrings[] = { "front", "right", "left", "back", "top", "bottom" };
 
 // Sets default values for this component's properties
 UCubeClass::UCubeClass()
@@ -38,10 +42,10 @@ void UCubeClass::BeginPlay()
 	Super::BeginPlay();
 	//int i = front; i != bottom; i++
 	SetupArray();
-	UE_LOG(LogTemp, Warning, TEXT("Is this working"));
+	GEngine->AddOnScreenDebugMessage(1, 10, FColor::Green, FString::Printf(TEXT("value is %d"), sides[0].values[1][1]));
 }
 
-void SetupArray()
+void UCubeClass::SetupArray()
 {
 	for (int i = 1; i <= 6; i++)
 	{
@@ -55,6 +59,8 @@ void SetupArray()
 		}
 	}
 }
+
+//TODO allow user to change the value a block
 
 // Called every frame
 void UCubeClass::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
