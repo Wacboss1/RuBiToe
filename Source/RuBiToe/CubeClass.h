@@ -2,29 +2,26 @@
 
 #pragma once
 
-#include "UObject/Object.h"
-#include "Misc/OutputDeviceNull.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "CubeControllerPlus.generated.h"
+#include "CubeClass.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class RUBITOE_API UCubeControllerPlus : public UActorComponent
+class RUBITOE_API UCubeClass : public UActorComponent
 {
 	GENERATED_BODY()
-
 public:	
 	// Sets default values for this component's properties
-	UCubeControllerPlus();
+	UCubeClass();
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	void SetupArray();
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
 		
 };
