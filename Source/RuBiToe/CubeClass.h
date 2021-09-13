@@ -18,7 +18,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-	void SetupArray();
+	void SetupSides();
 
 public:	
 	// Called every frame
