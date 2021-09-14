@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "CubeClass.h"
+#include "CubeController.h"
 
 //Prototypes
 
@@ -25,7 +25,7 @@ typedef struct CubeFace {
 side sides[6];
 
 // Sets default values for this component's properties
-UCubeClass::UCubeClass()
+UCubeController::UCubeController()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -36,14 +36,14 @@ UCubeClass::UCubeClass()
 
 
 // Called when the game starts
-void UCubeClass::BeginPlay()
+void UCubeController::BeginPlay()
 {
 	Super::BeginPlay();
 	//int i = front; i != bottom; i++
 	SetupSides();
 }
 
-void UCubeClass::SetupSides()
+void UCubeController::SetupSides()
 {
 	for (int i = 1; i <= 6; i++)
 	{
@@ -61,10 +61,15 @@ void UCubeClass::SetupSides()
 //TODO allow user to change the value a block
 
 // Called every frame
-void UCubeClass::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+}
+
+void UCubeController::ChangeStatus()
+{
+
 }
 
