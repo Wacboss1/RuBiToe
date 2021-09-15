@@ -16,7 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UCubeScript();
 	UPROPERTY(EditAnywhere)
-	char faceValue;
+	uint8 faceValue;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
