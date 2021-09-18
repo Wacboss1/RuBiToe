@@ -18,14 +18,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
-private:
-	void SetupSides();
-
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	UFUNCTION(BlueprintCallable, Category="CubeMethod")
-	void ChangeStatus();
 };

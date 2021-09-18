@@ -3,27 +3,6 @@
 
 #include "CubeController.h"
 
-//Prototypes
-
-
-//Data
-enum sideName {
-	front,
-	right,
-	left,
-	back,
-	top,
-	bottom
-};
-
-typedef struct CubeFace {
-	sideName name;
-	int values[3][3];
-} side;
-
-//Class variables
-side sides[6];
-
 // Sets default values for this component's properties
 UCubeController::UCubeController()
 {
@@ -40,23 +19,8 @@ void UCubeController::BeginPlay()
 {
 	Super::BeginPlay();
 	//int i = front; i != bottom; i++
-	SetupSides();
 }
 
-void UCubeController::SetupSides()
-{
-	for (int i = 1; i <= 6; i++)
-	{
-		sides[i].name = static_cast<sideName>(i);
-		for (int j = 0; j < 3; j++)
-		{
-			for (int k = 0; k < 3; k++)
-			{
-				sides[i-1].values[j][k] = 0;
-			}
-		}
-	}
-}
 
 //TODO allow user to change the value a block
 
@@ -66,10 +30,5 @@ void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
-}
-
-void UCubeController::ChangeStatus()
-{
-
 }
 

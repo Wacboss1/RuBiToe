@@ -9,7 +9,7 @@ UCubeScript::UCubeScript()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	faceValue = ' ';
+	faceValue = ECS_Empty;
 	// ...
 }
 
@@ -32,8 +32,13 @@ void UCubeScript::TickComponent(float DeltaTime, ELevelTick TickType, FActorComp
 	// ...
 }
 
-void UCubeScript::SetValue(uint8 val)
+void UCubeScript::SetValue(TEnumAsByte<ECubeState> Val)
 {
-	faceValue = val;
+	faceValue = Val;
+}
+
+ECubeState UCubeScript::GetValue()
+{
+	return faceValue;
 }
 
