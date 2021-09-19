@@ -6,6 +6,14 @@
 #include "Components/ActorComponent.h"
 #include "CubeController.generated.h"
 
+USTRUCT(BlueprintType)
+struct FRow
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Cube Row")
+	TArray<AActor*> Cubes;
+};
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class RUBITOE_API UCubeController : public UActorComponent
@@ -14,7 +22,6 @@ class RUBITOE_API UCubeController : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UCubeController();
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
