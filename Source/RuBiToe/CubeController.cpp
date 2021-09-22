@@ -2,7 +2,6 @@
 
 
 #include "CubeController.h"
-
 // Sets default values for this component's properties
 UCubeController::UCubeController()
 {
@@ -18,7 +17,6 @@ UCubeController::UCubeController()
 void UCubeController::BeginPlay()
 {
 	Super::BeginPlay();
-	//int i = front; i != bottom; i++
 }
 
 
@@ -28,7 +26,8 @@ void UCubeController::BeginPlay()
 void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	//ECubeState cubeName = Rows[0].Cubes[0]->GetComponentsByClass(UCubeScript)[0].;
+	//GEngine->AddOnScreenDebugMessage(1, 15.0f, FColor::Emerald, FString::Printf(TEXT("Top left value: %s"), *cubeName));
 	// ...
 }
 

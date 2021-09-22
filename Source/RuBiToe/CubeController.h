@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "CubeScript.h"
 #include "CubeController.generated.h"
 
+
 USTRUCT(BlueprintType)
-struct FRow
+struct FCubeRow
 {
 	GENERATED_BODY()
 
@@ -22,6 +24,10 @@ class RUBITOE_API UCubeController : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UCubeController();
+
+	UPROPERTY(BlueprintReadWrite, Category = "Row")
+	TArray<FCubeRow> Rows;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
