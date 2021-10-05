@@ -26,8 +26,14 @@ void UCubeController::BeginPlay()
 void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	//ECubeState cubeName = Rows[0].Cubes[0]->GetComponentsByClass(UCubeScript)[0].;
-	//GEngine->AddOnScreenDebugMessage(1, 15.0f, FColor::Emerald, FString::Printf(TEXT("Top left value: %s"), *cubeName));
 	// ...
+}
+
+void UCubeController::CheckForWin()
+{
+	for(int i = 0; i < sizeof(Rows)/sizeof(Rows[0]); i++)
+	{
+		
+	}
 }
 
