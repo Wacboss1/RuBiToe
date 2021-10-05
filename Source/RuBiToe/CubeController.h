@@ -24,7 +24,6 @@ class RUBITOE_API UCubeController : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UCubeController();
-
 	UPROPERTY(BlueprintReadWrite, Category = "Row")
 	TArray<FCubeRow> Rows;
 
@@ -34,6 +33,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	UFUNCTION(BlueprintCallable, Category = "Row")
-	void CheckForWin();
+	UFUNCTION(BlueprintCallable, CallInEditor, Category = "Row")
+	bool CheckForWin();
+	bool CheckAcross(int i);
 };

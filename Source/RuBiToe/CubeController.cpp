@@ -2,6 +2,8 @@
 
 
 #include "CubeController.h"
+#include "CubeScript.h"
+
 // Sets default values for this component's properties
 UCubeController::UCubeController()
 {
@@ -29,11 +31,25 @@ void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	// ...
 }
 
-void UCubeController::CheckForWin()
+bool UCubeController::CheckForWin()
 {
-	for(int i = 0; i < sizeof(Rows)/sizeof(Rows[0]); i++)
+	for(int i = 0; i < Rows.Num(); i++)
 	{
-		
+		return CheckAcross(i);
 	}
+	return false;
 }
 
+bool UCubeController::CheckAcross(int i)
+{
+	if (
+		Rows[i].Cubes[0]->FindComponentByClass<UCubeScript>()->GetValue() != ECubeState::ECS_Empty &&
+		Rows[i].Cubes[0]->FindComponentByClass<UCubeScript>()->GetValue() == Rows[i].Cubes[1]->FindComponentByClass<UCubeScript>()->GetValue() &&
+		Rows[i].Cubes[1]->FindComponentByClass<UCubeScript>()->GetValue() == Rows[i].Cubes[2]->FindComponentByClass<UCubeScript>()->GetValue()
+		)
+	{
+		return true;
+	}
+
+	return false;
+}
