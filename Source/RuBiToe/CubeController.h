@@ -33,7 +33,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	bool CheckBackslash();
+	bool CheckDown();
 	UFUNCTION(BlueprintCallable, CallInEditor, Category = "Row")
 	bool CheckForWin();
-	bool CheckAcross(int i);
+	bool CheckForwardSlash();
+	bool CheckAllAcross();
 };
