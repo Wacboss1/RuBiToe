@@ -28,18 +28,21 @@ public:
 	TArray<FCubeRow> Rows;
 	UPROPERTY(BlueprintReadWrite, Category = "Row")
 	TEnumAsByte<ECubeState> WinningTeam;
+	
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	UFUNCTION(BlueprintCallable, CallInEditor, Category = "Row")
 	bool CheckForWin();
+	
 protected:
 	bool CheckBackslash();
 	bool CheckAllDown();
 	bool CheckForwardSlash();
 	bool CheckAllAcross();
-	void SetWinningTeam(ECubeState team);
+	void SetWinningTeam(ECubeState Team);
 };

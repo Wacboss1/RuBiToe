@@ -28,17 +28,13 @@ void UCubeController::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	// ...
 }
 
-void UCubeController::SetWinningTeam(ECubeState team)
+void UCubeController::SetWinningTeam(ECubeState Team)
 {
-	WinningTeam = team;
+	WinningTeam = Team;
 }
 
 bool UCubeController::CheckForWin()
 {
-	if(CheckAllAcross() || CheckAllDown() || CheckBackslash() || CheckForwardSlash())
-	{
-		GEngine->AddOnScreenDebugMessage(2, 20, FColor::Green, TEXT("Victory Detected"));
-	}
 	return CheckAllAcross() || CheckAllDown() || CheckBackslash() || CheckForwardSlash();
 }
 
